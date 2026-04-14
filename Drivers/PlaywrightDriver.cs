@@ -14,8 +14,8 @@ public class PlaywrightDriver
 
         _browser.Value = await _playwright.Value.Chromium.LaunchAsync(new()
         {
-            Headless = false,
-            SlowMo = 300
+            Headless = true,
+            //SlowMo = 300
         });
 
         _page.Value = await _browser.Value.NewPageAsync();
